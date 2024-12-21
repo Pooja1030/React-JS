@@ -13,6 +13,8 @@ const App = () => {
 
   useEffect(()=>{
     const loggedInUser = localStorage.getItem('loggedInUser')
+
+    // if the user is logged in then 
     
     if(loggedInUser){
       const userData = JSON.parse(loggedInUser)
@@ -22,7 +24,7 @@ const App = () => {
 
   },[])
 
-
+// Handle Login logic
   const handleLogin = (email, password) => {
     if (email == 'admin@me.com' && password == '123') {
       setUser('admin')
